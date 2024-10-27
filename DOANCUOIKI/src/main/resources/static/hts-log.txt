@@ -1,0 +1,16 @@
+HTTrack3.49-2+htsswf+htsjava launched on Thu, 10 Oct 2024 21:51:57 at http://themesflat.co/html/remos/index.html +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" http://themesflat.co/html/remos/index.html -O1 "D:\New folder\lord" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+21:52:00	Error: 	"Internal Server Error" (500) after 2 retries at link https://themesflat.co/robots.txt (from primary/primary)
+21:54:13	Warning: 	Retry after error -4 (No data (connection closed)) at link https://themesflat.co/html/remos/images/products/43.png (from https://themesflat.co/html/remos/product-list.html)
+21:54:13	Warning: 	Retry after error 500 (Internal Server Error) at link https://themesflat.co/html/remos/create-roles.html (from https://themesflat.co/html/remos/all-roles.html)
+21:54:15	Warning: 	Retry after error 500 (Internal Server Error) at link https://themesflat.co/html/remos/create-roles.html (from https://themesflat.co/html/remos/all-roles.html)
+21:54:16	Error: 	"Internal Server Error" (500) after 2 retries at link https://themesflat.co/html/remos/create-roles.html (from https://themesflat.co/html/remos/all-roles.html)
+
+HTTrack Website Copier/3.49-2 mirror complete in 2 minutes 19 seconds : 240 links scanned, 235 files written (12565628 bytes overall) [9706025 bytes received at 69827 bytes/sec], 3250858 bytes transferred using HTTP compression in 39 files, ratio 9%, 3.4 requests per connection
+(2 errors, 3 warnings, 0 messages)
