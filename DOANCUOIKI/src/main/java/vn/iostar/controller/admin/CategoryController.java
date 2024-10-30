@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -46,6 +47,23 @@ public class CategoryController {
 		 * "redirect:/admin/categories"; }
 		 */
 		 redirectAttributes.addFlashAttribute("successMessage", "Category saved successfully!");
+		categoryService.save(category);
+		return "redirect:/admin/categories";
+	}
+	
+	// Mun 53 - 78
+	@GetMapping("/edit/{id}")
+	public String edit(@PathVariable("id") long id, ModelMap model) {
+		Category category = categoryService.findById(id).orElseThrow(() -> new RuntimeException("Not found"));
+		model.addAttribute("category", category);
+		return "admin/edit-category";
+	}
+
+	@PostMapping("/update")
+	public String update(@Valid Category category, BindingResult result, Model model) {
+		if (result.hasErrors()) {
+			return "admin/home";
+		}
 		categoryService.save(category);
 		return "redirect:/admin/categories";
 	}

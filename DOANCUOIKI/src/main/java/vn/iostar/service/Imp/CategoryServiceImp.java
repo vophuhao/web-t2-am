@@ -53,4 +53,9 @@ public class CategoryServiceImp implements ICategoryService
 	    return categoryRepository.findByCategoryId(categoryId);
 	            
 	}
+	
+	@Override
+	public Optional<Category> findById(Long id) {
+		return categoryRepository.findById(id);
+	}
 }

@@ -17,5 +17,7 @@ public interface ICategoryService {
 	<S extends Category> S save(S entity);
 
 	Optional<Category> getCategoryByCategoryId(String categoryId);
+	
+	Optional<Category> findById(Long id);
 
 }
