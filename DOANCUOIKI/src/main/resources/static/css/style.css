@@ -4289,9 +4289,9 @@ select.h40 {
 .wg-table {
   overflow-x: auto !important;
 }
-.wg-table::-webkit-scrollbar {
+/* .wg-table::-webkit-scrollbar {
   height: 4px;
-}
+} */ 
 .wg-table::-webkit-scrollbar-thumb {
   background: var(--Note);
   border-radius: 10px;
@@ -4687,9 +4687,9 @@ select.h40 {
 .wg-table.table-product-list .product-item:nth-child(2n+1) {
   background: var(--bg-table);
 }
-.wg-table.table-all-category > * {
+/* .wg-table.table-all-category > * {
   min-width: 1515px;
-}
+} */
 .wg-table.table-all-category ul.table-title {
   padding: 12px;
   border-radius: 12px;

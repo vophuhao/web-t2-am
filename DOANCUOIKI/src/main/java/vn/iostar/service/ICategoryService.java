@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 import vn.iostar.entity.Category;
 
-@Service
+
 public interface ICategoryService {
 
 	List<Category> findAll();

@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 public class ProductSize {
 
 	@Id
-	private int size;
+	private long size;
 	
    
     
