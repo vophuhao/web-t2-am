@@ -30,5 +30,5 @@ public class ProductVariant {
     @JoinColumn(name = "productId")
     private Product product;
 
-    // Getters and Setters
+    
 }
