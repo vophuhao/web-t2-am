@@ -27,7 +27,7 @@
 
 <!-- Bootstrap CSS
 ============================================ -->
-<link rel="stylesheet" th:href="@{/css/bootstrap2.min.css}">
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
 <!-- Bootstrap CSS
 ============================================ -->
 <link rel="stylesheet" th:href="@{/css/font-awesome.min.css}">
@@ -73,53 +73,550 @@
 	<!-- start header -->
 	<div th:replace="~{view/fragments/header::header}"></div>
 	<!-- end header -->
-	
-	<!-- start main -->
-	
-	<!-- end main -->
-	
-	<!-- start footer -->
-	<div th:replace="~{view/fragments/footer::footer}">	
-	
+
+	<!-- slider area start -->
+	<div class="slider-area home1">
+		<div class="bend niceties preview-2">
+			<div id="nivoslider" class="slides">
+				<img src="img/slider/slider-1.jpg" alt=""
+					title="#slider-direction-1" /> <img src="img/slider/slider-2.jpg"
+					alt="" title="#slider-direction-2" />
+			</div>
+			<!-- direction 1 -->
+			<div id="slider-direction-1" class="t-cn slider-direction">
+				<div class="slider-progress"></div>
+				<div class="slider-content t-lfl s-tb slider-1">
+					<div class="title-container s-tb-c title-compress">
+						<h1 class="title1">Sale products</h1>
+						<h2 class="title2">nike Ari max 2015</h2>
+						<h3 class="title3">Lorem Ipsum is simply dummy text of the
+							printing</h3>
+
+					</div>
+				</div>
+			</div>
+			<!-- direction 2 -->
+			<div id="slider-direction-2" class="slider-direction">
+				<div class="slider-progress"></div>
+				<div class="slider-content t-lfl s-tb slider-2">
+					<div class="title-container s-tb-c">
+						<h1 class="title1">Sale products</h1>
+						<h2 class="title2">GET UP TO 50% SALE</h2>
+						<h3 class="title3">Lorem Ipsum is simply dummy text of the
+							printing</h3>
+
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-	<!-- <div th:replace="~{view/fragments/footer-bot::footer-bot}">
-	
-	</div> -->
-	<!-- end footer -->
-	
-	 <!-- jquery
+
+
+	<!-- slider area end -->
+	<!-- banner area start -->
+	<div class="banner-area">
+		<div class="single-banner">
+			<div class="part-1">
+				<div class="box-1 box">
+					<h4>nike ari max 2015</h4>
+					<h2>air superiority</h2>
+					<p>Lorem Ipsum is simply dummy text of the printing and
+						typesetting industry.</p>
+					<a href="#">shopping now</a>
+				</div>
+				<div class="box-2">
+					<a href="#"> <img src="img/banner/banner-2.jpg" alt="">
+					</a>
+				</div>
+			</div>
+			<div class="part-2">
+				<div class="search-box">
+					<form action="#">
+						<input type="text">
+						<button type="submit">
+							<i class="fa fa-search"></i>
+						</button>
+					</form>
+				</div>
+				<div class="box-3">
+					<a href="#"> <img src="img/banner/banner-1.jpg" alt="">
+					</a>
+				</div>
+				<div class="box-4 box">
+					<h4>nike ari max 2015</h4>
+					<h2>air superiority</h2>
+					<p>Lorem Ipsum is simply dummy text of the printing and
+						typesetting industry.</p>
+					<a href="#">shopping now</a>
+				</div>
+				<div class="box-5">
+					<a href="#"> <img src="img/banner/banner-3.jpg" alt="">
+					</a>
+				</div>
+				<div class="box-6">
+					<a href="#"> <img src="img/banner/banner-4.jpg" alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- banner area end -->
+
+	<!-- products area start -->
+	<!-- products area start -->
+	<div class="products-area">
+		<div class="container">
+			<div class="products">
+				<div class="row">
+					<div class="col-lg-3">
+						<div class="product-menu">
+							<div class="menu-title">
+								<h2>
+									Best seller <strong>Products</strong>
+								</h2>
+							</div>
+							<div class="side-menu">
+								<!-- Nav tabs -->
+								<ul class="nav tab-navigation" role="tablist">
+									<li role="presentation"><a class="active"
+										th:href="@{#tab1}" aria-controls="tab1" role="tab"
+										data-bs-toggle="tab">Women</a></li>
+									<li role="presentation"><a th:href="@{#tab2}"
+										aria-controls="tab2" role="tab" data-bs-toggle="tab">men</a></li>
+									<li role="presentation"><a th:href="@{#tab3}"
+										aria-controls="tab3" role="tab" data-bs-toggle="tab">Footwear</a>
+									</li>
+									<li role="presentation"><a th:href="@{#tab4}"
+										aria-controls="tab4" role="tab" data-bs-toggle="tab">Jewelry</a>
+									</li>
+									<li role="presentation"><a th:href="@{#tab5}"
+										aria-controls="tab5" role="tab" data-bs-toggle="tab">Accessories</a>
+									</li>
+									<li role="presentation"><a th:href="@{#tab6}"
+										aria-controls="tab6" role="tab" data-bs-toggle="tab">Dresses</a>
+									</li>
+									<li role="presentation"><a th:href="@{#tab7}"
+										aria-controls="tab7" role="tab" data-bs-toggle="tab">shoes</a>
+									</li>
+									<li role="presentation"><a th:href="@{#tab8}"
+										aria-controls="tab8" role="tab" data-bs-toggle="tab">Handbags</a>
+									</li>
+									<li><img src="img/banner/banner-5.jpg" alt=""></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-9">
+						<div class="row">
+							<!-- Tab panes -->
+							<div class="tab-content">
+								<div role="tabpanel" class="tab-pane fade show active" id="tab1">
+									<div class="product-slider carousel-margin">
+										<div class="col">
+											<div class="single-product">
+												<div class="level-pro-new">
+													<span>new</span>
+												</div>
+												<div class="product-img">
+													<a> <img src="img/product/1.png" alt=""
+														class="primary-img"> <img src="img/product/2.png"
+														alt="" class="secondary-img">
+													</a>
+												</div>
+												<div class="product-name">
+													<a title="Fusce aliquam">Fusce aliquam</a>
+												</div>
+												<div class="price-rating">
+													<span>$170.00</span>
+													<div class="ratings">
+														<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+															class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+															class="fa fa-star-half-o"></i>
+													</div>
+												</div>
+												<div class="actions">
+													<button type="submit" class="cart-btn" title="Add to cart">add
+														to cart</button>
+													<ul class="add-to-link">
+														<li><a class="modal-view" data-target="#productModal"
+															data-bs-toggle="modal" th:href="@{#}"> <i
+																class="fa fa-search"></i></a></li>
+														<li><a th:href="@{#}"> <i class="fa fa-heart-o"></i></a></li>
+														<li><a th:href="@{#}"> <i class="fa fa-refresh"></i></a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="single-product">
+												<div class="level-pro-sale">
+													<span>sale</span>
+												</div>
+												<div class="product-img">
+													<a> <img src="img/product/1.png" alt=""
+														class="primary-img"> <img src="img/product/2.png"
+														alt="" class="secondary-img">
+													</a>
+												</div>
+												<div class="product-name">
+													<a th:href="@{single-product.html}" title="Fusce aliquam">Fusce
+														aliquam</a>
+												</div>
+												<div class="price-rating">
+													<span class="old-price">$700.00</span> <span>$800.00</span>
+													<div class="ratings">
+														<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+															class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+															class="fa fa-star-half-o"></i>
+													</div>
+												</div>
+												<div class="actions">
+													<button type="submit" class="cart-btn" title="Add to cart">add
+														to cart</button>
+													<ul class="add-to-link">
+														<li><a class="modal-view" data-target="#productModal"
+															data-bs-toggle="modal" th:href="@{#}"> <i
+																class="fa fa-search"></i></a></li>
+														<li><a th:href="@{#}"> <i class="fa fa-heart-o"></i></a></li>
+														<li><a th:href="@{#}"> <i class="fa fa-refresh"></i></a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="col">
+											<div class="single-product">
+												<div class="level-pro-sale">
+													<span>sale</span>
+												</div>
+												<div class="product-img">
+													<a> <img src="img/product/3.png" alt=""
+														class="primary-img"> <img src="img/product/4.png"
+														alt="" class="secondary-img">
+													</a>
+												</div>
+												<div class="product-name">
+													<a title="Fusce aliquam">Fusce aliquam</a>
+												</div>
+												<div class="price-rating">
+													<span class="old-price">$700.00</span> <span>$170.00</span>
+													<div class="ratings">
+														<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+															class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+															class="fa fa-star-half-o"></i>
+													</div>
+												</div>
+												<div class="actions">
+													<button type="submit" class="cart-btn" title="Add to cart">add
+														to cart</button>
+													<ul class="add-to-link">
+														<li><a class="modal-view" data-target="#productModal"
+															data-bs-toggle="modal" th:href="@{#}"> <i
+																class="fa fa-search"></i></a></li>
+														<li><a th:href="@{#}"> <i class="fa fa-heart-o"></i></a></li>
+														<li><a th:href="@{#}"> <i class="fa fa-refresh"></i></a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="single-product">
+												<div class="level-pro-sale">
+													<span>sale</span>
+												</div>
+												<div class="product-img">
+													<a> <img src="img/product/9.png" alt=""
+														class="primary-img"> <img src="img/product/10.png"
+														alt="" class="secondary-img">
+													</a>
+												</div>
+												<div class="product-name">
+													<a title="Fusce aliquam">Fusce aliquam</a>
+												</div>
+												<div class="price-rating">
+													<span class="old-price">$700.00</span> <span>$800.00</span>
+													<div class="ratings">
+														<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+															class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+															class="fa fa-star-half-o"></i>
+													</div>
+												</div>
+												<div class="actions">
+													<button type="submit" class="cart-btn" title="Add to cart">add
+														to cart</button>
+													<ul class="add-to-link">
+														<li><a class="modal-view" data-target="#productModal"
+															data-bs-toggle="modal" th:href="@{#}"> <i
+																class="fa fa-search"></i></a></li>
+														<li><a th:href="@{#}"> <i class="fa fa-heart-o"></i></a></li>
+														<li><a th:href="@{#}"> <i class="fa fa-refresh"></i></a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="col">
+											<div class="single-product">
+												<div class="level-pro-new">
+													<span>new</span>
+												</div>
+												<div class="product-img">
+													<a> <img src="img/product/5.png" alt=""
+														class="primary-img"> <img src="img/product/6.png"
+														alt="" class="secondary-img">
+													</a>
+												</div>
+												<div class="product-name">
+													<a title="Fusce aliquam">Fusce aliquam</a>
+												</div>
+												<div class="price-rating">
+													<span>$170.00</span>
+													<div class="ratings">
+														<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+															class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+															class="fa fa-star-half-o"></i>
+													</div>
+												</div>
+												<div class="actions">
+													<button type="submit" class="cart-btn" title="Add to cart">add
+														to cart</button>
+													<ul class="add-to-link">
+														<li><a class="modal-view" data-target="#productModal"
+															data-bs-toggle="modal" th:href="@{#}"> <i
+																class="fa fa-search"></i></a></li>
+														<li><a th:href="@{#}"> <i class="fa fa-heart-o"></i></a></li>
+														<li><a th:href="@{#}"> <i class="fa fa-refresh"></i></a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="single-product">
+												<div class="level-pro-sale">
+													<span>sale</span>
+												</div>
+												<div class="product-img">
+													<a> <img src="img/product/11.png}" alt=""
+														class="primary-img"> <img src="img/product/12.png}"
+														alt="" class="secondary-img">
+													</a>
+												</div>
+												<div class="product-name">
+													<a title="Fusce aliquam">Fusce aliquam</a>
+												</div>
+												<div class="price-rating">
+													<span class="old-price">$700.00</span> <span>$800.00</span>
+													<div class="ratings">
+														<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+															class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+															class="fa fa-star-half-o"></i>
+													</div>
+												</div>
+												<div class="actions">
+													<button type="submit" class="cart-btn" title="Add to cart">add
+														to cart</button>
+													<ul class="add-to-link">
+														<li><a class="modal-view" data-target="#productModal"
+															data-bs-toggle="modal" th:href="@{#}"> <i
+																class="fa fa-search"></i></a></li>
+														<li><a th:href="@{#}"> <i class="fa fa-heart-o"></i></a></li>
+														<li><a th:href="@{#}"> <i class="fa fa-refresh"></i></a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="col">
+											<div class="single-product">
+												<div class="level-pro-new">
+													<span>new</span>
+												</div>
+												<div class="product-img">
+													<a> <img src="img/product/21.png" alt=""
+														class="primary-img"> <img src="img/product/22.png"
+														alt="" class="secondary-img">
+													</a>
+												</div>
+												<div class="product-name">
+													<a title="Fusce aliquam">Fusce aliquam</a>
+												</div>
+												<div class="price-rating">
+													<span>$170.00</span>
+													<div class="ratings">
+														<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+															class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+															class="fa fa-star-half-o"></i>
+													</div>
+												</div>
+												<div class="actions">
+													<button type="submit" class="cart-btn" title="Add to cart">add
+														to cart</button>
+													<ul class="add-to-link">
+														<li><a class="modal-view" data-target="#productModal"
+															data-bs-toggle="modal" th:href="@{#}"> <i
+																class="fa fa-search"></i></a></li>
+														<li><a th:href="@{#}"> <i class="fa fa-heart-o"></i></a></li>
+														<li><a th:href="@{#}"> <i class="fa fa-refresh"></i></a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="single-product">
+												<div class="level-pro-sale">
+													<span>sale</span>
+												</div>
+												<div class="product-img">
+													<a> <img src="img/product/3.png" alt=""
+														class="primary-img"> <img src="img/product/16.png"
+														alt="" class="secondary-img">
+													</a>
+												</div>
+												<div class="product-name">
+													<a title="Fusce aliquam">Fusce aliquam</a>
+												</div>
+												<div class="price-rating">
+													<span class="old-price">$700.00</span> <span>$800.00</span>
+													<div class="ratings">
+														<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+															class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+															class="fa fa-star-half-o"></i>
+													</div>
+												</div>
+												<div class="actions">
+													<button type="submit" class="cart-btn" title="Add to cart">add
+														to cart</button>
+													<ul class="add-to-link">
+														<li><a class="modal-view" data-target="#productModal"
+															data-bs-toggle="modal" th:href="@{#}"> <i
+																class="fa fa-search"></i></a></li>
+														<li><a th:href="@{#}"> <i class="fa fa-heart-o"></i></a></li>
+														<li><a th:href="@{#}"> <i class="fa fa-refresh"></i></a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+
+									</div>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="tab2">
+									<div class="product-slider carousel-margin">
+										<div class="col">
+											<div class="single-product">
+												<div class="level-pro-new">
+													<span>new</span>
+												</div>
+												<div class="product-img">
+													<a> <img src="img/product/5.png" alt=""
+														class="primary-img"> <img src="img/product/6.png"
+														alt="" class="secondary-img">
+													</a>
+												</div>
+												<div class="product-name">
+													<a title="Fusce aliquam">Fusce aliquam</a>
+												</div>
+												<div class="price-rating">
+													<span>$170.00</span>
+													<div class="ratings">
+														<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+															class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+															class="fa fa-star-half-o"></i>
+													</div>
+												</div>
+												<div class="actions">
+													<button type="submit" class="cart-btn" title="Add to cart">add
+														to cart</button>
+													<ul class="add-to-link">
+														<li><a class="modal-view" data-target="#productModal"
+															data-bs-toggle="modal" th:href="@{#}"> <i
+																class="fa fa-search"></i></a></li>
+														<li><a th:href="@{#}"> <i class="fa fa-heart-o"></i></a></li>
+														<li><a th:href="@{#}"> <i class="fa fa-refresh"></i></a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="single-product">
+												<div class="level-pro-sale">
+													<span>sale</span>
+												</div>
+												<div class="product-img">
+													<a> <img src="img/product/11.png" alt=""
+														class="primary-img"> <img src="img/product/12.png"
+														alt="" class="secondary-img">
+													</a>
+												</div>
+												<div class="product-name">
+													<a title="Fusce aliquam">Fusce aliquam</a>
+												</div>
+												<div class="price-rating">
+													<span class="old-price">$700.00</span> <span>$800.00</span>
+													<div class="ratings">
+														<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+															class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+															class="fa fa-star-half-o"></i>
+													</div>
+												</div>
+												<div class="actions">
+													<button type="submit" class="cart-btn" title="Add to cart">add
+														to cart</button>
+													<ul class="add-to-link">
+														<li><a class="modal-view" data-target="#productModal"
+															data-bs-toggle="modal" th:href="@{#}"> <i
+																class="fa fa-search"></i></a></li>
+														<li><a th:href="@{#}"> <i class="fa fa-heart-o"></i></a></li>
+														<li><a th:href="@{#}"> <i class="fa fa-refresh"></i></a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- products area end -->
+	<!-- products area end -->
+
+	<!-- newsleter area start -->
+	<div th:replace="~{view/fragments/newsleter::newsleter}"></div>
+	<!-- newsleter area end -->
+	<!-- start footer top area -->
+	<div th:replace="~{view/fragments/footert::footert}"></div>
+	<!-- end footer top area -->
+
+
+	<!-- start footer area -->
+	<div th:replace="~{view/fragments/footera::footera}"></div>
+
+	<!-- end footer area -->
+	<!-- jquery
         ============================================ -->
-        <script src="@{/js/vendor/jquery-1.12.4.min.js}"></script>
-        <!-- bootstrap JS
+	<script src="/js/vendor/jquery-1.12.4.min.js"></script>
+	<!-- bootstrap JS
         ============================================ -->
-        <script src="@{/js/bootstrap.min.js}"></script>
-        <!-- wow JS
+	<script src="/js/bootstrap2.min.js"></script>
+	<!-- wow JS
         ============================================ -->
-        <script src="@{/js/wow.min.js}"></script>
-        <!-- price-slider JS
+	<script src="/js/wow.min.js"></script>
+	<!-- price-slider JS
         ============================================ -->
-        <script src="@{/js/jquery-price-slider.js}"></script>
-        <!-- nivoslider JS
+	<script src="/js/jquery-price-slider.js}"></script>
+	<!-- nivoslider JS
         ============================================ -->
-        <script src="@{/lib/js/jquery.nivo.slider.js}"></script>
-        <script src="@{/lib/home.js}"></script>
-        <!-- meanmenu JS
+	<script src="/lib/js/jquery.nivo.slider.js"></script>
+	<script src="/lib/home.js"></script>
+	<!-- meanmenu JS
         ============================================ -->
-        <script src="@{/js/jquery.meanmenu.js}"></script>
-        <!-- owl.carousel JS
+	<script src="/js/jquery.meanmenu.js"></script>
+	<!-- owl.carousel JS
         ============================================ -->
-        <script src="@{/js/owl.carousel.min.js}"></script>
-        <!-- elevatezoom JS
+	<script src="/js/owl.carousel.min.js"></script>
+	<!-- elevatezoom JS
         ============================================ -->
-        <script src="@{/js/jquery.elevatezoom.js}"></script>
-        <!-- scrollUp JS
+	<script src="/js/jquery.elevatezoom.js"></script>
+	<!-- scrollUp JS
         ============================================ -->
-        <script src="@{/js/jquery.scrollUp.min.js}"></script>
-        <!-- plugins JS
+	<script src="/js/jquery.scrollUp.min.js"></script>
+	<!-- plugins JS
         ============================================ -->
-        <script src="@{/js/plugins.js}"></script>
-        <!-- main JS
+	<script src="/js/plugins.js"></script>
+	<!-- main JS
         ============================================ -->
-        <script src="@{/js/main.js}"></script>
+	<script src="/js/main2.js"></script>
 </body>
 </html>
