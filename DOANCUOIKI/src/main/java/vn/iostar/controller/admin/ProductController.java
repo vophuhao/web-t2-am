@@ -66,4 +66,10 @@ public class ProductController {
 		productService.save(product);
 		return "redirect:/admin/products";
 	}
+	
+	@GetMapping("/productdetail")
+	public String productDetail()
+	{
+		return "admin/product-detail";
+	}
 }
