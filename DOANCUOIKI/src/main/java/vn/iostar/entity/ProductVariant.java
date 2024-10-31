@@ -29,8 +29,13 @@ public class ProductVariant {
     private double price;
 
     @Lob
-    private byte[] image; // Hình ảnh của sản phẩm
 
+    @OneToMany
+    (mappedBy = "productVariant", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+   
+    private List <ProductImage> productImage;
+    
+    
     @ManyToOne
     @JoinColumn(name = "productId")
     private Product product;

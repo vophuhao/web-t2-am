@@ -41,8 +41,8 @@ public class Category  implements Serializable{
 	
 	@Column(name = "status")
     private int status;
-    @OneToMany(mappedBy = "productId", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     
+    @OneToMany(mappedBy = "productId", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Product> products;
 
     // Getters and Setters
