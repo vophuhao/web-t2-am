@@ -1,0 +1,99 @@
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{admin/home.html}">
+<div class="main-content" layout:fragment="content">
+
+	<!-- main-content-wrap -->
+	<div class="main-content-inner">
+	
+		<!-- main-content-wrap -->
+		<div class="main-content-wrap">
+			<div class="flex items-center flex-wrap justify-between gap20 mb-27">
+				<h3>Add product</h3>
+				<ul
+					class="breadcrumbs flex items-center flex-wrap justify-start gap10">
+					<li>
+						<div class="text-tiny">Dashboard</div>
+					</li>
+					<li><i class="icon-chevron-right"></i></li>
+					<li>
+						<div class="text-tiny">Product</div>
+					</li>
+					<li><i class="icon-chevron-right"></i></li>
+					<li>
+						<div class="text-tiny">Add product</div>
+					</li>
+				</ul>
+			</div>
+			
+			<!-- form-add-product -->
+			<form class="form-add-product" th:action="@{/admin/products/save}" method="POST" th:object="${product}">
+				<div class="wg-box">
+				
+					<!-- Product id -->
+					<fieldset class="product-id">
+					    <label class="body-title mb-10" for="productId">Product ID: <span class="tf-color-1">*</span></label>
+					    <input type="text"
+					           class="form-control" id="productId" 
+					           name = "productId"
+					           aria-describedby="productIdid" 
+					           placeholder="Enter Product ID" required>
+					</fieldset>
+					
+					<!-- Product Name -->
+					<fieldset class="product-name">
+						<div class="body-title mb-10">
+							Product Name <span class="tf-color-1">*</span>
+						</div>
+						<input class="mb-10" type="text" placeholder="Enter product name"
+							name="productName" tabindex="0" aria-required="true"
+							required>
+						<div class="text-tiny">Do not exceed 20 characters for the
+							product name.</div>
+					</fieldset>
+
+					<!-- Category ID -->
+					<fieldset class="product-id">
+						<div class="body-title mb-10">
+							Category ID <span class="tf-color-1">*</span>
+						</div>
+						<input class="mb-10" type="text" placeholder="Enter category ID"
+							name="category"  tabindex="1" aria-required="true"
+							required>
+					</fieldset>
+					
+					<!-- Description -->
+					<fieldset class="product-id">
+						<div class="body-title mb-10">
+							Description <span class="tf-color-1">*</span>
+						</div>
+						<input class="mb-10" type="text" placeholder="Enter description"
+							name="description" tabindex="1" aria-required="true"
+							required>
+					</fieldset>
+									
+					<!-- Status Checkbox -->
+					<fieldset class="status">
+						<div class="body-title mb-10">
+							Status <span class="tf-color-1">*</span>
+						</div>
+						
+						<!-- Neu checkbox checked => luu gia tri 1 else luu gia tri 0 -->
+						<label>
+						    <input type="checkbox" name="status" value="1" >Active
+						</label>
+					</fieldset>
+					<div class="">
+						<button class="tf-button w-full" type="submit">Save product</button>	
+					</div>
+				</div>		
+			</form>
+			<!-- /form-add-product -->
+		</div>
+		<!-- /main-content-wrap -->
+	</div>
+	<!-- /main-content-wrap -->
+	<!-- bottom-page -->
+
+	<!-- /bottom-page -->
+</div>
