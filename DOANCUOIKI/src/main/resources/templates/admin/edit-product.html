@@ -27,9 +27,18 @@
 			</div>
 			
 			<!-- form-add-product -->
-			<form class="form-add-product" th:action="@{/admin/products/save}" method="POST" th:object="${product}">
+			<form class="form-add-product" th:action="@{/admin/products/update}" method="POST" th:object="${product}">
 				<div class="wg-box">
-				
+					<!-- Product id goc -->
+					<fieldset class="product-id">
+					    <label class="body-title mb-10" for="productId">ID: <span class="tf-color-1">*</span></label>
+					    <input type="text"
+					           class="form-control" id="productId" 
+					           name = "id"
+					           aria-describedby="productIdid" 
+					           placeholder="Enter Product ID" th:field = "*{id}" required>
+					</fieldset>
+									
 					<!-- Product id -->
 					<fieldset class="product-id">
 					    <label class="body-title mb-10" for="productId">Product ID: <span class="tf-color-1">*</span></label>
@@ -37,7 +46,7 @@
 					           class="form-control" id="productId" 
 					           name = "productId"
 					           aria-describedby="productIdid" 
-					           placeholder="Enter Product ID" required>
+					           placeholder="Enter Product ID" th:field = "*{productId}" required>
 					</fieldset>
 					
 					<!-- Product Name -->
@@ -46,7 +55,7 @@
 							Product Name <span class="tf-color-1">*</span>
 						</div>
 						<input class="mb-10" type="text" placeholder="Enter product name"
-							name="productName" tabindex="0" aria-required="true"
+							name="productName" tabindex="0" aria-required="true" th:field = "*{productName}"
 							required>
 						<div class="text-tiny">Do not exceed 20 characters for the
 							product name.</div>
@@ -61,18 +70,18 @@
 					        <option value="" disabled selected>Select Category</option>
 					        <option th:each="category : ${categories}" 
 					                th:value="${category.id}" 
-					                th:text="${category.categoryName}">
+					                th:text="${category.categoryName}"
+					                th:selected="${category.id == product.category.id}">
 					        </option>
 					    </select>
 					</fieldset>
-					
 					<!-- Description -->
 					<fieldset class="product-id">
 						<div class="body-title mb-10">
 							Description <span class="tf-color-1">*</span>
 						</div>
 						<input class="mb-10" type="text" placeholder="Enter description"
-							name="description" tabindex="1" aria-required="true"
+							name="description" tabindex="1" aria-required="true" th:field = "*{description}"
 							required>
 					</fieldset>
 									
@@ -84,7 +93,8 @@
 						
 						<!-- Neu checkbox checked => luu gia tri 1 else luu gia tri 0 -->
 						<label>
-						    <input type="checkbox" name="status" value="1" >Active
+						    <input type="checkbox" name="status" value="1" 
+						           th:checked="${product.status == 1}">Active
 						</label>
 					</fieldset>
 					<div class="">
