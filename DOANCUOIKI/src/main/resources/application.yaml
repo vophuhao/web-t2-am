@@ -6,9 +6,16 @@ server:
 
 spring:
   datasource:
+<<<<<<< HEAD
     url: "jdbc:mysql://26.168.186.68:3306/oneshop"
     username: username
     password: password
+=======
+    url: "jdbc:mysql://127.0.0.1:3306/oneshop"
+    username: root
+    password: 1234
+
+>>>>>>> remotes/origin/phuhao
   jpa:
     hibernate:
       ddl-auto: update
